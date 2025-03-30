@@ -45,3 +45,4 @@ def say_hello():
 # call function
 say_hello()
 
+# syntactic sugar
