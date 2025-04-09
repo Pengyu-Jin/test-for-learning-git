@@ -1,0 +1,34 @@
+Here you can practice Vim with context-aware help menu.v
+
+e.g. if you press 'd' you see that the list on the right changes: it will show
+(some of the) Vim command combinations that start with 'd'.
+
+context-aware do you know whta's the meaning of that?
+
+class solution():
+	def __init__():
+		jk 
+
+jkddThis is a test for tying vim keys.
+
+## Title here
+
+BE CONFIDENT TO YOURSELF, NO MATER YOU'RE SUCCESS OR NOT, DON'T BE DISAPPOINTED BY YOURSELF BECAUSE OF OATHER PEOPLE
+
+BE CONFIDENT TO YOURSELF, NO MATER YOU'RE SUCCESS OR NOT, DON'T BE DISAPPOINTED BY YOURSELF BECAUSE OF OATHER PEOPLE
+
+BE CONFIDENT TO YOURSELF, NO MATER YOU'RE SUCCESS OR NOT, DON'T BE DISAPPOINTED BY YOURSELF BECAUSE OF OATHER PEOPLE
+
+Noco dfkdk sks ff  yuorj s f 
+
+
+fjsk 
+
+
+fsjkfj  sjfk sja we f sfjke cof ejfa kf affjskf .
+
+
+fsjkfj  sjfk sja we ffsfjke aof ejfa kf affjskf .
+
+def funct(num):
+	

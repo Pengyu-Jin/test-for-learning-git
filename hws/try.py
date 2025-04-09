@@ -29,20 +29,36 @@
 # print(type(s))
 # print(int("".join(s)))
 
-def my_decorator(func):
-    def wrappper():
-        print("Before calling the function")
-        func()
-        print("After calling the function")
-    return wrappper
+# def decorator1(func):
+#     def wrapper(*args, **kwargs):
+#         print("Decorator 1: Before function call")
+#         result = func(*args, **kwargs)  # 调用原函数
+#         print("Decorator 1: After function call")
+#         return result
+#     return wrapper
 
-@my_decorator
-def say_hello():
-    print("Hello")
+# def decorator2(func):
+#     def wrapper(*args, **kwargs):
+#         print("Decorator 2: Before function call")
+#         result = func(*args, **kwargs)  # 调用原函数
+#         print("Decorator 2: After function call")
+#         return result
+#     return wrapper
 
-# say_hello = my_decorator(say_hello)
+# @decorator1
+# @decorator2
+# def say_hello(name):
+#     print(f"Hello, {name}!")
 
-# call function
-say_hello()
+# say_hello = decorator1(decorator2(say_hello))
 
-# syntactic sugar
+prices = {
+    'Acme': 45.23,
+    'AAPL': 612.78,
+    'IBM': 205.55,
+    'HPQ': 37.20,
+    'FB': 10.75,
+}
+
+x = zip(prices.values(), prices.keys())
+print(sorted(x))
