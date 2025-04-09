@@ -1,0 +1,21 @@
+name: Deploy HTML to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 当你 push 到 main 分支时触发
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .  # 如果你的 HTML 文件在根目录
+          publish_branch: gh-pages
+          force_orphan: true  # 可选：使 gh-pages 不保留历史记录
