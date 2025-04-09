@@ -1,76 +1,160 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <title>实用技能拾遗</title>
-    <style>
-        body {
-            font-family: "LXGW WenKai", "Noto Serif SC", "PingFang SC", "Microsoft YaHei", sans-serif;
-            max-width: 900px;
-            margin: auto;
-            padding: 2em;
-            line-height: 1.6;
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>2023秋冬实用技能拾遗</title>
+    <link rel="stylesheet" href="./dist/reset.css" />
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/simple.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/github.css" />
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js-menu@2.1.0/menu.js"></script>
+
+    <link rel="stylesheet" href="./assets/custom.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">
+
+<style>
+.reveal .slides {
+    border: none;
+}
+.reveal .slide-number {
+    display: none;
+}
+.reveal h2 {
+    text-align: center;
+}
+.reveal .slide-menu-button {
+    display: none;
+}
+.reveal table {
+  font-size: 21px;
+}
+</style>
+
+<div class="center">
+
+## 「实用技能拾遗」课程资料
+
+2023 年秋冬学期竺可桢学院学业指导中心辅学计划
+
+程序设计辅学精品课 ——「实用技能拾遗」课程资料网站
+
+ By [@TonyCrane](https://github.com/TonyCrane) & [@45gfg9](https://github.com/45gfg9)
+
+<div class="three-line">
+
+|课程|日期|讲师|幻灯片|回放|
+|:--|:--|:--|:--|:--|
+|lec0：前瞻：通往 Pro 的第一步|10.14（秋四周）|TonyCrane|[lec0](lec0/)|[BV1t34y1g7YU](https://www.bilibili.com/video/BV1t34y1g7YU/)|
+|lec1：Shell 基础及 CLI 工具推荐|10.22（秋五周）|45gfg9|[lec1](lec1/)|[BV1ry4y1A7qo](https://www.bilibili.com/video/BV1ry4y1A7qo/)|
+|lec2：Git/GitHub 及开源基础|11.05（秋七周）|TonyCrane|[lec2](lec2/)|[BV12u4y177vG](https://www.bilibili.com/video/BV12u4y177vG/)|
+|lec3：Markdown 语法及应用|11.19（冬一周）|TonyCrane|[lec3](lec3/)|[BV1pu4y1j7kA](https://www.bilibili.com/video/BV1pu4y1j7kA/)|
+|lec4：LaTeX 排版简要介绍|12.03（冬三周）|45gfg9|[lec4](lec4/lec4.pdf)|[BV1ka4y1o7S9](https://www.bilibili.com/video/BV1ka4y1o7S9/)|
+|lec5：如何排出规范、美观的文档|TBD|TonyCrane||
+|lec6：网络/网站基础知识概述|05.17（夏四周）|45gfg9|[lec6](lec6/)|[BV1nn4y1R7ZU](https://www.bilibili.com/video/BV1nn4y1R7ZU/)|
+
+</div>
+
+<!-- <p style="text-align: right; color: #888; margin-top: 0; margin-right: 2em; font-size: 21px;" class="heti-skip">*时间均为暂定</p> -->
+</script></section></div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
         }
-        h1, h2, h3, h4, h5 { color: #333; }
-        a { color: #1a73e8; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        code { background-color: #f6f8fa; padding: 0.2em 0.4em; border-radius: 3px; }
-        pre code { display: block; padding: 1em; overflow-x: auto; }
-        blockquote { color: #6a737d; border-left: 0.25em solid #dfe2e5; padding-left: 1em; }
-    </style>
-</head>
-<body>
-<h1 id="朋辈辅学实用技能拾遗课程仓库">朋辈辅学「实用技能拾遗」课程仓库</h1>
+        return target;
+      }
 
-<h2 id="课程介绍">课程介绍</h2>
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default',
+        slideNumber: true,
+        menu: {
+          themes: false,
+          width: "wide",
+          transitions: false,
+          markers: true,
+          hideMissingTitles: true,
+          openButton: true,
+          openSlideNumber: true,
+          custom: [
+            { title: 'Lectures', icon: '<i class="fas fa-external-link-alt">', content: getLecturesMenu() },
+          ]
+        },
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.KaTeX,
+          RevealMenu
+        ]
+      };
 
-<blockquote>
-  <p>大学里的计算机课程通常专注于讲授从操作系统到机器学习这些学院派的课程或主题，而对于如何精通工具这一主题则往往会留给学生自行探索。在这个系列课程中，我们讲授命令行、强大的文本编辑器的使用、使用版本控制系统提供的多种特性等等。学生在他们受教育阶段就会和这些工具朝夕相处（在他们的职业生涯中更是这样）。</p>
-  
-  <p>因此，花时间打磨使用这些工具的能力并能够最终熟练地、流畅地使用它们是非常有必要的。</p>
-  
-  <p>精通这些工具不仅可以帮助您更快的使用工具完成任务，并且可以帮助您解决在之前看来似乎无比复杂的问题。</p>
-  
-  <p><right>—— <a href="https://missing-semester-cn.github.io/">The Missing Semester of Your CS Education</a></right></p>
-</blockquote>
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
 
-<p>课程内容和目标类似 the missing semester，即讲授一些基础、实用但学校课程中并不会教的技能，内容难度和深度相比 the missing semester 都会有所降低，~~致力于做更适合刚入门计算机的中国宝宝的技能拾遗课程~~。</p>
+      var options = extend(defaultOptions, {"transition":"slide","transitionSpeed":"fast","center":false,"slideNumber":"c/t","width":1000,"showSlideNumber":"none"}, queryOptions);
 
-<h3 id="课程安排">课程安排</h3>
+      function getLecturesMenu() {
+        var lectures = [
+          { name: "#0 前瞻：通往 Pro 的第一步", src: "../lec0/"},
+          { name: "#1 Shell 基础及 CLI 工具推荐", src: "../lec1/"},
+          { name: "#2 Git/GitHub 及开源基础", src: "../lec2/"},
+          { name: "#3 Markdown 语法及应用", src: "../lec3/"},
+          { name: "#4 LaTeX 排版简要介绍", src: "../lec4/lec4.pdf"},
+          { name: "#5 如何排出规范、美观的文档", src: "../lec5/"},
+          { name: "#6 网络/网站基础知识概述", src: "../lec6/"},
+        ]
+        var lecturesMenu = '<ul class="slide-menu-items">';
+        for (var i=0; i < lectures.length; i++) {
+          lecturesMenu += '<li class="slide-menu-item"><a href="' + lectures[i].src + '" style="text-decoration:none">' + lectures[i].name + '</a></li>';
+        }
+        lecturesMenu += '</ul>';
+        return lecturesMenu;
+      }
+    </script>
 
-<p>课程主页：<a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/">https://slides.tonycrane.cc/PracticalSkillsTutorial/</a></p>
+    <script src="https://cdn.tonycrane.cc/heti/heti.js"></script>
+    <script src="./assets/heti_worker.js"></script>
 
-<ul>
-<li>2023 年春夏学期
-<ul>
-<li>浙江大学计算机学院朋辈辅学课程「实用技能拾遗」单周周日下午班</li>
-<li>课程材料：<a href="https://github.com/TonyCrane/PracticalSkillsTutorial/tree/2023-spring-cs"><code>2023-spring-cs</code></a> 分支</li>
-<li>课程网站：<a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-spring-cs/">https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-spring-cs/</a></li>
-<li>课程内容：(all by <a href="https://github.com/TonyCrane/">@TonyCrane</a>)
-<ul>
-<li><a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-spring-cs/lec1/">lec1：Shell 基础及 CLI 工具推荐</a></li>
-<li><a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-spring-cs/lec2/">lec2：Git/GitHub 基础介绍</a></li>
-<li><a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-spring-cs/lec3/">lec3：Markdown 语法及应用</a></li>
-<li><a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-spring-cs/lec4/">lec4：LaTeX 排版简要介绍</a></li>
-</ul></li>
-</ul></li>
-<li>2023 年秋冬学期
-<ul>
-<li>浙江大学竺可桢学院学指辅学计划 程序设计精品课「实用技能拾遗」课程</li>
-<li>课程材料：<a href="https://github.com/TonyCrane/PracticalSkillsTutorial/tree/master"><code>master</code></a> 分支（当前）</li>
-<li>课程网站：<a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-fall-ckc/">https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-fall-ckc/</a></li>
-<li>课程内容：
-<ul>
-<li><a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-fall-ckc/lec0/">lec0：前瞻：通往 Pro 的第一步</a> by <a href="https://github.com/TonyCrane">@TonyCrane</a></li>
-<li><a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-fall-ckc/lec1/">lec1：Shell 基础及 CLI 工具推荐</a> by <a href="https://github.com/45gfg9">@45gfg9</a></li>
-<li><a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-fall-ckc/lec2/">lec2：Git/GitHub 及开源基础</a> by <a href="https://github.com/TonyCrane">@TonyCrane</a></li>
-<li><a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-fall-ckc/lec3/">lec3：Markdown 语法及应用</a> by <a href="https://github.com/TonyCrane">@TonyCrane</a></li>
-<li><a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-fall-ckc/lec4/">lec4：LaTeX 排版简要介绍</a> by <a href="https://github.com/45gfg9">@45gfg9</a></li>
-<li><a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-fall-ckc/lec5/">lec5：如何排出规范、美观的文档</a> by <a href="https://github.com/TonyCrane">@TonyCrane</a></li>
-<li><a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/2023-fall-ckc/lec6/">lec6：网络/网站基础知识概述</a> by <a href="https://github.com/45gfg9">@45gfg9</a></li>
-</ul></li>
-</ul></li>
-</ul>
-
-</body>
+    <script>
+      Reveal.initialize(options).then(() => {
+        document.querySelector(".backgrounds").setAttribute("style", document.querySelector(".slides").style.cssText);
+      });
+      Reveal.on('overviewshown', event => {
+        document.querySelector(".backgrounds").setAttribute("style", "");
+      });
+      Reveal.on('overviewhidden', event => {
+        document.querySelector(".backgrounds").setAttribute("style", document.querySelector(".slides").style.cssText);
+      });
+      Reveal.on('resize', event => {
+        document.querySelector(".backgrounds").setAttribute("style", document.querySelector(".slides").style.cssText);
+      });
+    </script>
+  </body>
 </html>
