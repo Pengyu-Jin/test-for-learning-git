@@ -1,8 +1,0 @@
-Hello
-Python is great
-But sometimes
-python can be tricky
-Especially with indentation
-But we love python
-Anyway
-python test

@@ -1,0 +1,11 @@
+.container {
+    border-radius: 5px;
+    box-shadow: 0 8px 32px hsla(0deg, 0%, 0%, 0.32);
+    background-color: hsla(0deg, 0%, 100%);
+    padding: 48px;
+}
+@media screen and (max-width: 450px) {
+    .container {
+        padding: 5px;
+    }
+}

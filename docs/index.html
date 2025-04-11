@@ -5,7 +5,7 @@
       
       <link rel="stylesheet" href="file:///c:\Users\jpy20\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.18\crossnote\dependencies\katex\katex.min.css">
       
-      
+      <link rel="stylesheet" href="./style.css"
       
       
       
@@ -34,13 +34,6 @@
   color: #3730a3;
 }
 
-.shadow-wrapper {
-    border-radius: 5px;
-    box-shadow: 0 8px 32px hsla(0deg, 0%, 0%, 0.32);
-    background-color: hsl(0deg, 0%, 100%);
-    padding: 48px;
-  }
-
       </style>
       <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
   document.addEventListener("DOMContentLoaded", function () {
@@ -48,22 +41,61 @@
   });
 </script></head><body for="html-export">
     
-   
+    
+      <div class="crossnote markdown-preview  ">
 
-      <div class="crossnote markdown-preview">
-
-      <div class="shadow-wrapper">
-
-
+      <div class="container">
+      
 <h1 id="some-style-test">Some style test </h1>
 <h2 id="课程介绍">课程介绍 </h2>
 <blockquote>
 <p>大学里的计算机课程通常专注于讲授从操作系统到机器学习这些学院派的课程或主题，而对于如何精通工具这一主题则往往会留给学生自行探索。在这个系列课程中，我们讲授命令行、强大的文本编辑器的使用、使用版本控制系统提供的多种特性等等。学生在他们受教育阶段就会和这些工具朝夕相处（在他们的职业生涯中更是这样）。</p>
 <p>因此，花时间打磨使用这些工具的能力并能够最终熟练地、流畅地使用它们是非常有必要的。</p>
 <p>精通这些工具不仅可以帮助您更快的使用工具完成任务，并且可以帮助您解决在之前看来似乎无比复杂的问题。</p>
-<p><right>—— <a href="https://missing-semester-cn.github.io/">The Missing Semester of Your CS Education</a></right></p>
+<p>--<a href="https://missing-semester-cn.github.io/">The Missing Semester of Your CS Education</a></p>
 </blockquote>
-<p>课程内容和目标类似 the missing semester，即讲授一些基础、实用但学校课程中并不会教的技能，内容难度和深度相比 the missing semester 都会有所降低，<s>致力于做更适合刚入门计算机的中国宝宝的技能拾遗课程</s>。</p>
+<h3 id="实验记录">实验记录 </h3>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>SAC实验</th>
+<th>结果</th>
+<th>训练时间</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>reward权重：0.01、500；取消放缩比例</td>
+<td>失败，reward下降收敛</td>
+<td>/</td>
+<td>reward最后的放缩比例，不影响曲线趋势</td>
+</tr>
+<tr>
+<td>2</td>
+<td>reward权重：0.01、1000</td>
+<td>失败，reward下降收敛</td>
+<td>/</td>
+<td>/</td>
+</tr>
+<tr>
+<td>3</td>
+<td>reward权重：0.01、100</td>
+<td>失败，reward下降收敛</td>
+<td>/</td>
+<td>/</td>
+</tr>
+<tr>
+<td>4</td>
+<td>reward权重：0.01、30</td>
+<td>成功，reward上升收敛</td>
+<td>212min</td>
+<td>reward的权重设置有一定讲究，寻找论文</td>
+</tr>
+</tbody>
+</table>
 <h3 id="课程安排">课程安排 </h3>
 <p>课程主页：<a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/">https://slides.tonycrane.cc/PracticalSkillsTutorial/</a></p>
 <ul>
@@ -103,12 +135,11 @@
 </ul>
 <h3 id="cheatsheet">cheatsheet </h3>
 
-
-      </div>  
-
       </div>
 
-
+      </div>
+      
+      
     
     
     
