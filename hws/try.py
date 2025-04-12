@@ -52,13 +52,25 @@
 
 # say_hello = decorator1(decorator2(say_hello))
 
-prices = {
-    'Acme': 45.23,
-    'AAPL': 612.78,
-    'IBM': 205.55,
-    'HPQ': 37.20,
-    'FB': 10.75,
-}
+# prices = {
+#     'Acme': 45.23,
+#     'AAPL': 612.78,
+#     'IBM': 205.55,
+#     'HPQ': 37.20,
+#     'FB': 10.75,
+# }
 
-x = zip(prices.values(), prices.keys())
-print(sorted(x))
+# x = zip(prices.values(), prices.keys())
+# print(sorted(x))
+
+
+# print("当前工作目录：", os.getcwd())
+
+
+
+with open("hws/1.txt", "r") as f:
+    content = f.read()
+
+print(type(content))
+print(len(content))
+print(content[:11])
