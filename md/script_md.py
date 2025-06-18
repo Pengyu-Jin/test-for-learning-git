@@ -3,7 +3,7 @@ from pathlib import Path
 
 SOURCE_DIR = "md"
 OUTPUT_DIR = "docs"
-CSS_LINK = "<link rel='stylesheet' href='.\style.css'>"
+CSS_LINK = "<link rel='stylesheet' href='.\\style.css'>"
 WRAPPED_DIV_START = '<div class="container">'
 WRAPPED_DIV_END = '</div>'
 
@@ -25,6 +25,7 @@ def main():
     for root, _, files in os.walk(SOURCE_DIR):
         for file in files:
             if file.lower().endswith(".html"):
+                print(os.path.join(root, file))
                 process_html_file(os.path.join(root, file))
 
 if __name__ == "__main__":

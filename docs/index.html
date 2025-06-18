@@ -62,81 +62,13 @@ code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-fami
 <p>精通这些工具不仅可以帮助您更快的使用工具完成任务，并且可以帮助您解决在之前看来似乎无比复杂的问题。</p>
 <p>--<a href="https://missing-semester-cn.github.io/">The Missing Semester of Your CS Education</a></p>
 </blockquote>
-<h3 id="实验记录">实验记录 </h3>
-<table>
-<thead>
-<tr>
-<th>序号</th>
-<th>SAC实验</th>
-<th>结果</th>
-<th>训练时间</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>reward权重：0.01、500；取消放缩比例</td>
-<td>失败，reward下降收敛</td>
-<td>/</td>
-<td>reward最后的放缩比例，不影响曲线趋势</td>
-</tr>
-<tr>
-<td>2</td>
-<td>reward权重：0.01、1000</td>
-<td>失败，reward下降收敛</td>
-<td>/</td>
-<td>/</td>
-</tr>
-<tr>
-<td>3</td>
-<td>reward权重：0.01、100</td>
-<td>失败，reward下降收敛</td>
-<td>/</td>
-<td>/</td>
-</tr>
-<tr>
-<td>4</td>
-<td>reward权重：0.01、30</td>
-<td>成功，reward上升收敛</td>
-<td>212mins</td>
-<td>reward的权重设置有一定讲究，寻找论文</td>
-</tr>
-<tr>
-<td>5</td>
-<td>reward权重不变；gym包换成了gymnasium</td>
-<td>失败，reward从一开始就收敛</td>
-<td>217mins</td>
-<td>加油</td>
-</tr>
-</tbody>
-</table>
-<h3 id="to-do-list">TO DO list </h3>
+<h3>Version Record</h3>
 <ul>
-<li>两种策略对比</li>
-<li>reward design</li>
+  <li>v1.0: an article was born.</li>
+  <li>v2.0: varying alpha parameter and all experiments haven done.</li>
+  <li>v3.0: fix the soc penalty.</li>
 </ul>
-<h3 id="实验记录-1">实验记录 </h3>
-<table>
-<thead>
-<tr>
-<th>序号</th>
-<th>DQN实验</th>
-<th>结果</th>
-<th>训练时间</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Pendulum-v1环境训练结果正常，换为microgird环境</td>
-<td>失败，reward逐渐上升，但是没有收敛</td>
-<td>119.62min(CPU)</td>
-<td>再琢磨琢磨</td>
-</tr>
-</tbody>
-</table>
+
 <h3 id="课程安排">课程安排 </h3>
 <p>课程主页：<a href="https://slides.tonycrane.cc/PracticalSkillsTutorial/">https://slides.tonycrane.cc/PracticalSkillsTutorial/</a></p>
 <ul>
