@@ -4,7 +4,7 @@ from pathlib import Path
 SOURCE_DIR = "md"
 OUTPUT_DIR = "docs"
 CSS_LINK = "<link rel='stylesheet' href='.\style.css'>"
-WRAPPED_DIV_START = '<div class="crossnote markdown-preview">'
+WRAPPED_DIV_START = '<div class="container">'
 WRAPPED_DIV_END = '</div>'
 
 def process_html_file(file_path):
@@ -12,7 +12,7 @@ def process_html_file(file_path):
         content = f.read()
     
     content = content.replace("<style>", f"{CSS_LINK}\n<style>")
-    content = content.replace('<div class="crossnote markdown-preview  ">', f'<div class="crossnote markdown-preview  "\n{WRAPPED_DIV_START}>')
+    content = content.replace('<div class="crossnote markdown-preview  ">', f'<div class="crossnote markdown-preview  ">\n{WRAPPED_DIV_START}')
     content = content.replace('</div>', f'{WRAPPED_DIV_END}\n</div>')
 
     output_path = Path(OUTPUT_DIR) / "index.html"
